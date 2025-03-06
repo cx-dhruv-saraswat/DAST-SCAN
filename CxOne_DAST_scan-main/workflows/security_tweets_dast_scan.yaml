@@ -1,8 +1,8 @@
 name: CxONE Dast Scan Security Tweets
 on:
-  #pull_request:
-  # branches:
-  # - main
+  pull_request:
+    branches:
+    - main
   #push: 
   # branches:
   # - main
@@ -47,7 +47,7 @@ jobs:
             environment_id: "2a9f8f9a-5a62-468c-85ef-27bfbabf01bf"
             # canary
             #base_url: "https://deu.ast.checkmarx.net"
-            #environment_id: "fd6ea573-a228-47e1-b5f8-573525251bc0"
+            #environment_id: "b48b2267-8b39-4c91-b481-c52297f44e2f"
             fail_on: ""
             verbose: true
             output: ${{ github.workspace }}/output_fold
