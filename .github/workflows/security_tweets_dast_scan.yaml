@@ -43,7 +43,7 @@ jobs:
             config: './security_tweets.yaml'
             log_level: info
             #prod
-            base_url: "https://deu.ast.checkmarx.net"
+            base_url: "https://ast.checkmarx.net"
             environment_id: "b48b2267-8b39-4c91-b481-c52297f44e2f"
             # canary
             #base_url: "https://deu.ast.checkmarx.net"
