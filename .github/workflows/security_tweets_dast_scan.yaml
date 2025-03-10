@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Create Output folder
         run: mkdir ${{ github.workspace }}/output_fold
       - name: Change dir owner
@@ -43,8 +43,8 @@ jobs:
             config: './security_tweets.yaml'
             log_level: info
             #prod
-            base_url: "https://ast.checkmarx.net"
-            environment_id: "2a9f8f9a-5a62-468c-85ef-27bfbabf01bf"
+            base_url: "https://deu.ast.checkmarx.net"
+            environment_id: "b48b2267-8b39-4c91-b481-c52297f44e2f"
             # canary
             #base_url: "https://deu.ast.checkmarx.net"
             #environment_id: "b48b2267-8b39-4c91-b481-c52297f44e2f"
@@ -54,7 +54,7 @@ jobs:
       - name: Reclaim output directory
         if: always()
         run: sudo chown -R 1001:1001 ${{ github.workspace }}/output_fold
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: always()
         name: Upload Logs
         with:
